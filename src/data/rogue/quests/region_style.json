@@ -210,8 +210,8 @@
                 [
                     { "money": "QUEST_REWARD_MEDIUM_MONEY" },
                     {
-                        "species": "SPECIES_LITLEO",
-                        "custom_mon_id": "CUSTOM_MON_EXOTIC_LITLEO"
+                        "species": "SPECIES_MINIOR_METEOR_VIOLET",
+                        "custom_mon_id": "CUSTOM_MON_EXOTIC_MINIOR_METEOR_VIOLET"
                     },
                     {
                         "species": "SPECIES_HONEDGE",

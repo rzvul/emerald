@@ -6104,6 +6104,8 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     [MOVE_UPPER_HAND] = {0}, // TODO
 
     [MOVE_MALIGNANT_CHAIN] = {0}, // TODO
+
+    [MOVE_ZSTAR_PRISM] = {0}
 };
 
 const struct ContestEffect gContestEffects[] =

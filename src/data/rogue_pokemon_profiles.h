@@ -222796,7 +222796,7 @@ static struct LevelUpMove const sLevelUpMoves_SPECIES_MINIOR[] =
 {
 	{ .move=MOVE_TACKLE, .level=1 },
 	{ .move=MOVE_DEFENSE_CURL, .level=3 },
-	{ .move=MOVE_ROLLOUT, .level=8 },
+	{ .move=MOVE_ZSTAR_PRISM, .level=7 },
 	{ .move=MOVE_CONFUSE_RAY, .level=10 },
 	{ .move=MOVE_SWIFT, .level=15 },
 	{ .move=MOVE_ANCIENT_POWER, .level=17 },
