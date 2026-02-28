@@ -2922,7 +2922,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         BACK_PIC(MiniorMega, 64, 64),  // Schimbă 64, 64 cu lățimea și înălțimea reală a sprite-ului
         .backPicYOffset = 0,           // Ajustează poziția verticală a sprite-ului
         PALETTES(MiniorMega),
-        ICON(MiniorCore, 0),           // Al doilea parametru este indexul paletei pentru iconiță
+        ICON(MiniorCoreViolet, 0),           // Al doilea parametru este indexul paletei pentru iconiță
         .footprint = gMonFootprint_Minior,
         LEARNSETS(Minior),
         .formSpeciesIdTable = sMiniorFormSpeciesIdTable,
