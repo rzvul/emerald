@@ -17874,21 +17874,21 @@ Move_ZSTAR_PRISM::
 	createvisualtask AnimTask_BlendParticle, 0x5, ANIM_TAG_CIRCLE_OF_LIGHT, 0x0, 0x10, 0x10, 0x5bff
 	waitforvisualfinish
 	playsewithpan SE_M_REVERSAL, SOUND_PAN_ATTACKER
-	createsprite gExtremeEvoboostRedChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x1c, 0x510, 0x1e, 0xd, 0x1f, ANIM_ATTACKER
+	createsprite gExtremeEvoboostRedChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x1c, 0x510, 0x1e, 0xd, 0x1f, ANIM_ATTACKER
 	delay 0x2
-	createsprite gExtremeEvoboostOrangeChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x20, 0x4e0, 0x14, 0x10, 0x3df, ANIM_ATTACKER
+	createsprite gExtremeEvoboostYellowChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x20, 0x4e0, 0x14, 0x10, 0x3df, ANIM_ATTACKER
 	delay 0x2
-	createsprite gExtremeEvoboostYellowChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x21, 0x540, 0x14, 0x8, 0x3ff, ANIM_ATTACKER
+	createsprite gExtremeEvoboostYellowChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x21, 0x540, 0x14, 0x8, 0x3ff, ANIM_ATTACKER
 	delay 0x2
-	createsprite gExtremeEvoboostGreenChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x1f, 0x490, 0x19, 0xb, 0x3e0, ANIM_ATTACKER
+	createsprite gExtremeEvoboostGreenChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x1f, 0x490, 0x19, 0xb, 0x3e0, ANIM_ATTACKER
 	delay 0x2
-	createsprite gExtremeEvoboostBlueChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x1c, 0x500, 0x19, 0x10, 0x7c00, ANIM_ATTACKER
+	createsprite gExtremeEvoboostBlueChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x1c, 0x500, 0x19, 0x10, 0x7c00, ANIM_ATTACKER
 	delay 0x2
-	createsprite gExtremeEvoboostPurpleChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x21, 0x4d0, 0x1e, 0xf, 0x4010, ANIM_ATTACKER
+	createsprite gExtremeEvoboostPurpleChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x21, 0x4d0, 0x1e, 0xf, 0x4010, ANIM_ATTACKER
 	delay 0x2
-	createsprite gExtremeEvoboostPinkChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x1c, 0x510, 0x1e, 0xd, 0x401f, ANIM_ATTACKER
+	createsprite gExtremeEvoboostPinkChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x1c, 0x510, 0x1e, 0xd, 0x401f, ANIM_ATTACKER
 	delay 0x2
-	createsprite gExtremeEvoboostIceChargeUpSpriteTemplatee, ANIM_TARGET, 2, 0x0, 0x20, 0x4e0, 0x14, 0x10, 0x7fff, ANIM_ATTACKER
+	createsprite gExtremeEvoboostIceChargeUpSpriteTemplate, ANIM_TARGET, 2, 0x0, 0x20, 0x4e0, 0x14, 0x10, 0x7fff, ANIM_ATTACKER
 	delay 0x2
 	waitforvisualfinish
 	visible ANIM_ATTACKER
@@ -34561,54 +34561,54 @@ General_DynamaxGrowth:: @ PORTED FROM CFRU
 	end
 
 ExtremeEvoboostColorCirclee:
-	createsprite gExtremeEvoboostRedChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x1f
+	createsprite gExtremeEvoboostRedChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x1f
 	delay 0x2
-	createsprite gExtremeEvoboostOrangeChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3df
+	createsprite gExtremeEvoboostYellowChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3df
 	delay 0x2
-	createsprite gExtremeEvoboostYellowChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3ff
+	createsprite gExtremeEvoboostYellowChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3ff
 	delay 0x2
-	createsprite gExtremeEvoboostGreenChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3e0
+	createsprite gExtremeEvoboostGreenChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3e0
 	delay 0x2
-	createsprite gExtremeEvoboostBlueChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7c00
+	createsprite gExtremeEvoboostBlueChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7c00
 	delay 0x2
-	createsprite gExtremeEvoboostPurpleChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x4010
+	createsprite gExtremeEvoboostPurpleChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x4010
 	delay 0x2
-	createsprite gExtremeEvoboostPinkChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x401f
+	createsprite gExtremeEvoboostPinkChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x401f
 	delay 0x2
-	createsprite gExtremeEvoboostIceChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7fff
+	createsprite gExtremeEvoboostIceChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7fff
 	delay 0x2
 	return
 ExtremeEvoboostColorChargee:
-	createsprite gExtremeEvoboostRedChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x1f
+	createsprite gExtremeEvoboostRedChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x1f
 	delay 0x2
-	createsprite gExtremeEvoboostRedStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0x37, 0x37, 0x1f
+	createsprite gExtremeEvoboostRedStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0x37, 0x37, 0x1f
 	delay 0x2
-	createsprite gExtremeEvoboostOrangeChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3df
+	createsprite gExtremeEvoboostYellowChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3df
 	delay 0x2
-	createsprite gExtremeEvoboostOrangeStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0xffc9, 0xffc9, 0x3df
+	createsprite gExtremeEvoboostYellowStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0xffc9, 0xffc9, 0x3df
 	delay 0x2
-	createsprite gExtremeEvoboostYellowChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3ff
+	createsprite gExtremeEvoboostYellowChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3ff
 	delay 0x2
-	createsprite gExtremeEvoboostYellowStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0x37, 0x3ff
+	createsprite gExtremeEvoboostYellowStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0x37, 0x3ff
 	delay 0x2
-	createsprite gExtremeEvoboostGreenChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3e0
+	createsprite gExtremeEvoboostGreenChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x3e0
 	delay 0x2
-	createsprite gExtremeEvoboostGreenStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xffc9, 0x3e0
+	createsprite gExtremeEvoboostGreenStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xffc9, 0x3e0
 	delay 0x2
-	createsprite gExtremeEvoboostBlueChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7c00
+	createsprite gExtremeEvoboostBlueChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7c00
 	delay 0x2
-	createsprite gExtremeEvoboostBlueStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0x37, 0xffde, 0x7c00
+	createsprite gExtremeEvoboostBlueStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0x37, 0xffde, 0x7c00
 	delay 0x2
-	createsprite gExtremeEvoboostPurpleChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x4010
+	createsprite gExtremeEvoboostPurpleChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x4010
 	delay 0x2
-	createsprite gExtremeEvoboostPurpleStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0x37, 0x22, 0x4010
+	createsprite gExtremeEvoboostPurpleStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0x37, 0x22, 0x4010
 	delay 0x2
-	createsprite gExtremeEvoboostPinkChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x401f
+	createsprite gExtremeEvoboostPinkChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x401f
 	delay 0x2
-	createsprite gExtremeEvoboostPinkStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0xffc9, 0xffde, 0x401f
+	createsprite gExtremeEvoboostPinkStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0xffc9, 0xffde, 0x401f
 	delay 0x2
-	createsprite gExtremeEvoboostIceChargeCircleSpriteTemplatee, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7fff
+	createsprite gExtremeEvoboostIceChargeCircleSpriteTemplate, ANIM_ATTACKER, 2, 0x0, 0xfff0, 0x7fff
 	delay 0x2
-	createsprite gExtremeEvoboostIceStockpileSpriteTemplatee, ANIM_ATTACKER, 2, 0xffc9, 0x22, 0x7fff
+	createsprite gExtremeEvoboostIceStockpileSpriteTemplate, ANIM_ATTACKER, 2, 0xffc9, 0x22, 0x7fff
 	delay 0x2
 	return
