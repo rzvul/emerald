@@ -438,6 +438,7 @@ static const u16 speciesMegaList[] = {
     SPECIES_GALLADE_MEGA,
     SPECIES_AUDINO_MEGA,
     SPECIES_DIANCIE_MEGA,
+    SPECIES_MINIOR_MEGA,
 };
 
 u32 RogueGift_GetCustomMonIdBySpecies(u16 species, u32 otId)

@@ -2801,7 +2801,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
 #if P_FAMILY_MINIOR
 #define MINIOR_MISC_INFO(color)                                 \
-        .types = { TYPE_ROCK, TYPE_FLYING },                    \
+    {   .types = { TYPE_ROCK, TYPE_FLYING },                    \
         .catchRate = 30,                                        \
         .expYield = 154,                                        \
         .evYield_Defense = 1,                                   \
@@ -2827,7 +2827,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .footprint = gMonFootprint_Minior,                      \
         LEARNSETS(Minior),                                      \
         .formSpeciesIdTable = sMiniorFormSpeciesIdTable
-
+    }
 #define MINIOR_METEOR_SPECIES_INFO(Form)                        \
     {                                                           \
         .baseHP        = 60,                                    \
@@ -2922,7 +2922,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         BACK_PIC(MiniorMega, 64, 64),  // Schimbă 64, 64 cu lățimea și înălțimea reală a sprite-ului
         .backPicYOffset = 0,           // Ajustează poziția verticală a sprite-ului
         PALETTES(MiniorMega),
-        ICON(MiniorCoreViolet, 0),           // Al doilea parametru este indexul paletei pentru iconiță
+        ICON(MiniorCore##Form, iconPal),           // Al doilea parametru este indexul paletei pentru iconiță
         .footprint = gMonFootprint_Minior,
         LEARNSETS(Minior),
         .formSpeciesIdTable = sMiniorFormSpeciesIdTable,
