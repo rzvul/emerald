@@ -11223,7 +11223,7 @@ BattleScript_EffectZStarPrism::
 BattleScript_Maxed::
 	attackanimation
 	waitanimation
-	goto BattleScript_Hit
+	goto BattleScript_EffectHit
 BattleScript_ExtremeEvoboostAnime::
 	attackanimation
 	waitanimation
@@ -11256,6 +11256,6 @@ BattleScript_ExtremeEvoboostSpDefe::
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_ExtremeEvoboostEnde::
-	goto BattleScript_Hit
+	goto BattleScript_EffectHit
 	
 	
