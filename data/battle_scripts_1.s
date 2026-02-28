@@ -11233,6 +11233,9 @@ BattleScript_HitFromAtkAnimatione::
 	seteffectwithchance
 BattleScript_TryFaintMone::
 	tryfaintmon BS_TARGET
+	return
+BattleScript_MoveEnde::
+	return
 
 BattleScript_EffectZStarPrism::
 	setmoveeffect MOVE_EFFECT_DIRE_CLAW
