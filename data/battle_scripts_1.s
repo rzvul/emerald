@@ -11207,6 +11207,43 @@ BattleScript_EffectSnow::
 	goto BattleScript_MoveWeatherChange
 
 BattleScript_EffectZStarPrism::
+	attackcanceler
+	attackstring
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPEED, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
+BattleScript_ExtremeEvoboostAnime:
+	attackanimation
+	waitanimation
+BattleScript_ExtremeEvoboostAtke::
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_DEF | BIT_SPEED | BIT_SPATK | BIT_SPDEF, 0x0
+	setstatchanger STAT_ATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ExtremeEvoboostDefe
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ExtremeEvoboostDefe::
+	setstatchanger STAT_DEF, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ExtremeEvoboostSpeede
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ExtremeEvoboostSpeede::
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ExtremeEvoboostSpAtke
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ExtremeEvoboostSpAtke::
+	setstatchanger STAT_SPATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ExtremeEvoboostSpDefe
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ExtremeEvoboostSpDefe::
+	setstatchanger STAT_SPDEF, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_ExtremeEvoboostEnde
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_ExtremeEvoboostEnde::
 	setmoveeffect MOVE_EFFECT_DIRE_CLAW
-	goto BattleScript_EffectExtremeEvoboost
 	goto BattleScript_EffectHit
