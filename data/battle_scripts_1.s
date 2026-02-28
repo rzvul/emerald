@@ -11207,18 +11207,13 @@ BattleScript_EffectSnow::
 	goto BattleScript_MoveWeatherChange
 
 BattleScript_EffectHite:
-BattleScript_HitFromAtkCancelere::
 	attackcanceler
-BattleScript_HitFromAccChecke::
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
-BattleScript_HitFromAtkStringe::
 	attackstring
 	ppreduce
-BattleScript_HitFromCritCalce::
 	critcalc
 	damagecalc
 	adjustdamage
-BattleScript_HitFromAtkAnimatione::
 	attackanimation
 	waitanimation
 	effectivenesssound
@@ -11231,25 +11226,19 @@ BattleScript_HitFromAtkAnimatione::
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	seteffectwithchance
-BattleScript_TryFaintMone::
 	tryfaintmon BS_TARGET
-	return
-BattleScript_MoveEnde::
-	return
 
 BattleScript_EffectZStarPrism::
 	setmoveeffect MOVE_EFFECT_DIRE_CLAW
-	attackcanceler
-	attackstring
+	attackanimation
+	waitanimation
+	BattleScript_EffectHite:
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPEED, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, MAX_STAT_STAGE, BattleScript_ExtremeEvoboostAnime
 BattleScript_ExtremeEvoboostAnime:
-	attackanimation
-	waitanimation
-goto BattleScript_EffectHite
 BattleScript_ExtremeEvoboostAtke::
 	setbyte sSTAT_ANIM_PLAYED, FALSE
 	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_DEF | BIT_SPEED | BIT_SPATK | BIT_SPDEF, 0x0
