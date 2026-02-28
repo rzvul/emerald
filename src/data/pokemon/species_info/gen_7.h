@@ -2876,6 +2876,59 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
     }
     //.backAnimId = BACK_ANIM_NONE,
 
+    #if P_MEGA_EVOLUTIONS
+    [SPECIES_MINIOR_MEGA] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 140,
+        .baseDefense   = 60,
+        .baseSpeed     = 140,
+        .baseSpAttack  = 140,
+        .baseSpDefense = 60,
+        .types = { TYPE_STELLAR, TYPE_STELLAR }, // Placeholder type
+        .catchRate = 30,
+        .expYield = 200,
+        .evYield_Attack = 1, // Poți ajusta EV-urile după cum dorești
+        .evYield_SpAttack = 1,
+        .evYield_Speed = 1,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
+        .abilities = { ABILITY_MOLD_BREAKER, ABILITY_NONE }, // Placeholder ability
+        .bodyColor = BODY_COLOR_BLACK, // Placeholder color
+        .noFlip = TRUE,
+        .speciesName = _("Minior"),
+        .cryId = CRY_MINIOR, // Placeholder
+        .natDexNum = NATIONAL_DEX_MINIOR,
+        .categoryName = _("Meteor"),
+        .height = 3,
+        .weight = 3,
+        .description = POKEDEX_DESC_STRING(
+            "This crystal core absorbs pure light.\n"
+            "Seven rings pulse with cosmic power.\n"
+            "It refracts beams into blinding rainbows.\n"
+            "Its quartz body never stops glowing."),
+        .pokemonScale = 530,
+        .pokemonOffset = 13,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(MiniorMega, 64, 64), // Schimbă 64, 64 cu lățimea și înălțimea reală a sprite-ului
+        .frontPicYOffset = 0,          // Ajustează poziția verticală a sprite-ului
+        .frontAnimFrames = sAnims_MiniorMeteor, // Poți refolosi animațiile existente sau crea unele noi
+        .frontAnimId = ANIM_TUMBLING_FRONT_FLIP_TWICE,
+        .enemyMonElevation = 0,        // Ajustează înălțimea la care "plutește"
+        BACK_PIC(MiniorMega, 64, 64),  // Schimbă 64, 64 cu lățimea și înălțimea reală a sprite-ului
+        .backPicYOffset = 0,           // Ajustează poziția verticală a sprite-ului
+        PALETTES(MiniorMega),
+        ICON(MiniorCore, 0),           // Al doilea parametru este indexul paletei pentru iconiță
+        .footprint = gMonFootprint_Minior,
+        LEARNSETS(Minior),
+        .formSpeciesIdTable = sMiniorFormSpeciesIdTable,
+        .isMegaEvolution = TRUE,
+    },
+    
     [SPECIES_MINIOR_METEOR_RED]    = MINIOR_METEOR_SPECIES_INFO(Red),
     [SPECIES_MINIOR_METEOR_ORANGE] = MINIOR_METEOR_SPECIES_INFO(Orange),
     [SPECIES_MINIOR_METEOR_YELLOW] = MINIOR_METEOR_SPECIES_INFO(Yellow),

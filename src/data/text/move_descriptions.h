@@ -3342,7 +3342,7 @@ static const u8 sMalignantChainDescription[] = _(
     "that may badly poison.");
 
 static const u8 sZStarPrismDescription[] = _(
-    "Prismatic light raises its user\n"
+    "Prismatic light flows user's\n"
     "stats and weakens the foe.");
 
 const u8 gNotDoneYetDescription[] = _(

@@ -88,7 +88,9 @@ bool32 CanTerastallize(u32 battler)
     if (species == SPECIES_RAYQUAZA_MEGA
         || species == SPECIES_KYOGRE_PRIMAL
         || species == SPECIES_GROUDON_PRIMAL
-        || species == SPECIES_PIKIN_MEGA)
+        || species == SPECIES_PIKIN_MEGA
+        || species == SPECIES_MINIOR_MEGA
+        )
         return FALSE;
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE

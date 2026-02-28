@@ -71,6 +71,22 @@ SINGLE_BATTLE_TEST("Rayquaza can Mega Evolve knowing Dragon Ascent")
     }
 }
 
+SINGLE_BATTLE_TEST("Minior can Mega Evolve knowing Z-Star Surge")
+{
+    GIVEN {
+        PLAYER(SPECIES_MINIOR_CORE) { Moves(MOVE_ZSTAR_PRISM, MOVE_CELEBRATE); }
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_CELEBRATE, megaEvolve: TRUE); }
+    } SCENE {
+        MESSAGE("1's fervent wish has reached Minior!");
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, player);
+        MESSAGE("Minior has Mega Evolved into Mega Minior!");
+    } THEN {
+        EXPECT_EQ(player->species, SPECIES_MINIOR_MEGA);
+    }
+}
+
 SINGLE_BATTLE_TEST("Mega Evolution affects turn order")
 {
     GIVEN {
@@ -150,6 +166,27 @@ SINGLE_BATTLE_TEST("Regular Mega Evolution and Fervent Wish Mega Evolution can h
         MESSAGE("Foe Gardevoir has Mega Evolved into Mega Gardevoir!");
     } THEN {
         EXPECT_EQ(player->species, SPECIES_RAYQUAZA_MEGA);
+        EXPECT_EQ(opponent->species, SPECIES_GARDEVOIR_MEGA);
+    }
+}
+
+SINGLE_BATTLE_TEST("Regular Mega Evolution and Fervent Wish Mega Evolution can happen on the same turn")
+{
+    GIVEN {
+        PLAYER(SPECIES_MINIOR) { Moves(MOVE_ZSTAR_PRISM, MOVE_CELEBRATE); Speed(3); }
+        OPPONENT(SPECIES_GARDEVOIR) { Item(ITEM_GARDEVOIRITE); Speed(2); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_CELEBRATE, megaEvolve: TRUE); MOVE(opponent, MOVE_CELEBRATE, megaEvolve: TRUE); }
+    } SCENE {
+        MESSAGE("1's fervent wish has reached Minior!");
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, player);
+        MESSAGE("Minior has Mega Evolved into Mega Minior!");
+
+        MESSAGE("Foe Gardevoir's Gardevoirite is reacting to 2's Mega Ring!");
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_MEGA_EVOLUTION, opponent);
+        MESSAGE("Foe Gardevoir has Mega Evolved into Mega Gardevoir!");
+    } THEN {
+        EXPECT_EQ(player->species, SPECIES_MINIOR_MEGA);
         EXPECT_EQ(opponent->species, SPECIES_GARDEVOIR_MEGA);
     }
 }

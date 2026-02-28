@@ -315622,4 +315622,12 @@ struct RoguePokemonProfile const gRoguePokemonProfiles[NUM_SPECIES] =
 		.competitiveSetCount = ARRAY_COUNT(sCompetitiveSets_SPECIES_MAREEP),
 		.monFlags = MON_FLAGS_SPECIES_MAREEP,
 	},
+	[SPECIES_MINIOR_MEGA] = 
+	{
+		.levelUpMoves = sLevelUpMoves_SPECIES_MINIOR,
+		.tutorMoves = sTutorMoves_SPECIES_MINIOR,
+		.competitiveSets = sCompetitiveSets_SPECIES_MINIOR,
+		.competitiveSetCount = ARRAY_COUNT(sCompetitiveSets_SPECIES_MINIOR),
+		.monFlags = MON_FLAGS_SPECIES_MINIOR,
+	},
 };

@@ -1776,7 +1776,8 @@
 #define SPECIES_WOBBUFFET_PUNCHING                      SPECIES_ROGUE_START + 1
 #define SPECIES_PIKIN_MEGA                              SPECIES_ROGUE_START + 2
 
-#define SPECIES_EGG SPECIES_PIKIN_MEGA + 1
+#define SPECIES_MINIOR_MEGA                             SPECIES_PIKIN_MEGA + 1
+#define SPECIES_EGG                                     SPECIES_MINIOR_MEGA + 1
 
 #define NUM_SPECIES SPECIES_EGG
 

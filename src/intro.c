@@ -96,6 +96,8 @@ static void Task_Scene3_LoadLightning(u8);
 static void Task_Scene3_Lightning(u8);
 static void Task_Scene3_LoadRayquazaAttack(u8);
 static void Task_Scene3_Rayquaza(u8);
+static void Task_Scene3_LoadMiniorAttack(u8);
+static void Task_Scene3_Minior(u8);
 static void Task_EndIntroMovie(u8);
 
 // Scene 3 supplemental functions
@@ -103,6 +105,7 @@ static void CreateGroudonRockSprites(u8);
 static void CreateKyogreBubbleSprites_Body(u8);
 static void CreateKyogreBubbleSprites_Fins(void);
 static void Task_RayquazaAttack(u8);
+static void Task_MiniorAttack(u8);
 static void SpriteCB_GroudonRocks(struct Sprite *);
 static void SpriteCB_KyogreBubbles(struct Sprite *sprite);
 static void SpriteCB_Lightning(struct Sprite *sprite);
@@ -2618,6 +2621,180 @@ static void Task_EndIntroMovie(u8 taskId)
 }
 
 static void Task_RayquazaAttack(u8 taskId)
+{
+    u8 spriteId;
+    s16 *data = gTasks[taskId].data;
+    data[2]++;
+
+    switch(tState)
+    {
+    case 0:
+        if ((data[2] & 1) != 0)
+        {
+            CpuCopy16(&gIntro3Bg_Pal[0x1A2 + data[1] * 2], &gPlttBufferFaded[BG_PLTT_ID(5) + 14], PLTT_SIZEOF(1));
+            data[1]++;
+        }
+        if (data[1] == 6)
+        {
+            tState++;
+            data[1] = 0;
+            data[3] = 10;
+        }
+        break;
+    case 1:
+        if (data[3] == 0)
+        {
+            if ((data[2] & 1) != 0)
+            {
+                CpuCopy16(&gIntro3Bg_Pal[0x1A2 + data[1] * 2], &gPlttBufferFaded[BG_PLTT_ID(5) + 8], PLTT_SIZEOF(1));
+                data[1]++;
+            }
+            if (data[1] == 6)
+            {
+                tState++;
+                data[3] = 10;
+            }
+        }
+        else
+        {
+            data[3]--;
+        }
+        break;
+    case 2:
+        if (data[3] == 0)
+        {
+            if ((data[2] & 1) != 0)
+            {
+                CpuCopy16(&gIntro3Bg_Pal[0x182 + data[1] * 2], &gPlttBufferFaded[BG_PLTT_ID(5) + 12], PLTT_SIZEOF(1));
+                data[1]++;
+            }
+            if (data[1] == 6)
+            {
+                spriteId = CreateSprite(&sSpriteTemplate_RayquazaOrb, 120, 88, 15);
+                PlaySE(SE_INTRO_BLAST);
+                gSprites[spriteId].invisible = TRUE;
+                gSprites[spriteId].data[3] = tRayquazaTaskId;
+                tState++;
+                data[3] = 16;
+            }
+        }
+        else
+        {
+            data[3]--;
+        }
+        break;
+    case 3:
+        if ((data[2] & 1) != 0)
+        {
+            if (--data[3] != 0)
+            {
+                BlendPalette(BG_PLTT_ID(5), 16, data[3], RGB(9, 10, 10));
+                CpuCopy16(&gIntro3Bg_Pal[428], &gPlttBufferFaded[BG_PLTT_ID(5) + 14], PLTT_SIZEOF(1));
+                CpuCopy16(&gIntro3Bg_Pal[428], &gPlttBufferFaded[BG_PLTT_ID(5) + 8], PLTT_SIZEOF(1));
+                CpuCopy16(&gIntro3Bg_Pal[396], &gPlttBufferFaded[BG_PLTT_ID(5) + 12], PLTT_SIZEOF(1));
+            }
+            else
+            {
+                tState++;
+                data[3] = 53;
+            }
+        }
+        break;
+    case 4:
+        if (--data[3] == 0)
+        {
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITE);
+            tState++;
+        }
+        break;
+    case 5:
+        if (!gPaletteFade.active)
+            DestroyTask(taskId);
+        break;
+    }
+}
+
+#define tRayquazaTaskId data[4]
+
+static void Task_Scene3_LoadRayquazaAttack(u8 taskId)
+{
+    u8 attackTaskId;
+
+    LoadCompressedSpriteSheet(sSpriteSheet_RayquazaOrb);
+    LoadSpritePalettes(sSpritePalette_RayquazaOrb);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0
+                                | DISPCNT_OBJ_1D_MAP
+                                | DISPCNT_BG0_ON
+                                | DISPCNT_BG2_ON
+                                | DISPCNT_OBJ_ON
+                                | DISPCNT_WIN0_ON);
+    gTasks[taskId].func = Task_Scene3_Rayquaza;
+    BeginNormalPaletteFade(PALETTES_BG & ~(0x21), 0, 16, 0, RGB(9, 10, 10));
+    gTasks[taskId].tState = 0;
+    gTasks[taskId].data[1] = 0xA8;
+    gTasks[taskId].data[2] = -0x10;
+    gTasks[taskId].data[3] = -0x88;
+    gTasks[taskId].data[4] = -0x10;
+    attackTaskId = CreateTask(Task_RayquazaAttack, 0);
+    gTasks[attackTaskId].tRayquazaTaskId = taskId;
+}
+
+static void Task_Scene3_Rayquaza(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    if (tTimer % 2 == 0)
+        data[6] ^= 2;
+
+    tTimer++;
+
+    switch(tState)
+    {
+    case 0:
+        if ((tTimer & 1) != 0)
+        {
+            data[1] -= 2;
+            data[2]++;
+            data[3] += 2;
+            data[4]++;
+        }
+        if (data[1] == 0x68)
+        {
+            tState++;
+            data[5] = 1;
+        }
+        break;
+    case 1:
+        tState++;
+        data[5] = 4;
+        break;
+    case 2:
+        data[1] += 4;
+        data[2] -= 2;
+        data[3] -= 4;
+        data[4] -= 2;
+        if (!gPaletteFade.active)
+        {
+            data[5] = 0x8C;
+            tState++;
+        }
+        break;
+    case 3:
+        if (--data[5] == 0)
+            gTasks[taskId].func = Task_EndIntroMovie;
+        break;
+    }
+}
+#undef tDelay
+#undef tTimer
+
+static void Task_EndIntroMovie(u8 taskId)
+{
+    DestroyTask(taskId);
+    SetMainCallback2(MainCB2_EndIntro);
+}
+
+static void Task_MiniorAttack(u8 taskId)
 {
     u8 spriteId;
     s16 *data = gTasks[taskId].data;

@@ -399,6 +399,12 @@ static const struct FormChange sRayquazaFormChangeTable[] = {
 };
 #endif //P_FAMILY_RAYQUAZA
 
+#if P_FAMILY_MINIOR
+static const struct FormChange sMiniorFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_MOVE,    SPECIES_MINIOR_MEGA, MOVE_ZSTAR_PRISM},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #if P_FAMILY_DEOXYS
 
 static const struct FormChange sDeoxysFormChangeTable[] = {
