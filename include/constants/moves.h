@@ -886,7 +886,7 @@
 #define MOVE_MAGICAL_TORQUE 826
 #define MOVE_PSYBLADE 827
 #define MOVE_HYDRO_STEAM 828
-// The Teal Mask Moves
+// The Teal Mask Movesa
 #define MOVE_BLOOD_MOON 829
 #define MOVE_MATCHA_GOTCHA 830
 #define MOVE_SYRUP_BOMB 831
