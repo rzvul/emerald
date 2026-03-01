@@ -2801,7 +2801,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
 #if P_FAMILY_MINIOR
 #define MINIOR_MISC_INFO(color)                                 \
-    {   .types = { TYPE_ROCK, TYPE_FLYING },                    \
+        .types = { TYPE_ROCK, TYPE_FLYING },                    \
         .catchRate = 30,                                        \
         .expYield = 154,                                        \
         .evYield_Defense = 1,                                   \
@@ -2827,7 +2827,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .footprint = gMonFootprint_Minior,                      \
         LEARNSETS(Minior),                                      \
         .formSpeciesIdTable = sMiniorFormSpeciesIdTable
-    }
+
 #define MINIOR_METEOR_SPECIES_INFO(Form)                        \
     {                                                           \
         .baseHP        = 60,                                    \
@@ -2876,8 +2876,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
     }
     //.backAnimId = BACK_ANIM_NONE,
 
-
-    
     [SPECIES_MINIOR_METEOR_RED]    = MINIOR_METEOR_SPECIES_INFO(Red),
     [SPECIES_MINIOR_METEOR_ORANGE] = MINIOR_METEOR_SPECIES_INFO(Orange),
     [SPECIES_MINIOR_METEOR_YELLOW] = MINIOR_METEOR_SPECIES_INFO(Yellow),
@@ -2892,7 +2890,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
     [SPECIES_MINIOR_CORE_BLUE]     = MINIOR_CORE_SPECIES_INFO(Blue,   BODY_COLOR_BLUE,   0),
     [SPECIES_MINIOR_CORE_INDIGO]   = MINIOR_CORE_SPECIES_INFO(Indigo, BODY_COLOR_BLUE,   0),
     [SPECIES_MINIOR_CORE_VIOLET]   = MINIOR_CORE_SPECIES_INFO(Violet, BODY_COLOR_PURPLE, 2),
-#endif //P_FAMILY_MINIOR
+#endif
 
 
     #if P_MEGA_EVOLUTIONS
