@@ -2943,6 +2943,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .footprint = gMonFootprint_Minior,
         LEARNSETS(Minior),
         .formSpeciesIdTable = sMiniorFormSpeciesIdTable,
+        .formChangeTable = sMiniorFormChangeTable,
         .isMegaEvolution = TRUE,
     },
     #endif

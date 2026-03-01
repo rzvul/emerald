@@ -8608,13 +8608,17 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u32 gMonPalette_MiniorCoreViolet[] = INCBIN_U32("graphics/pokemon/minior/core/violet/normal.gbapal.lz");
     const u8 gMonIcon_MiniorCoreViolet[] = INCBIN_U8("graphics/pokemon/minior/core/violet/icon.4bpp");
 
+
+#endif //P_FAMILY_MINIOR
+
+#if P_MEGA_EVOLUTIONS
     const u32 gMonFrontPic_MiniorMega[] = INCBIN_U32("graphics/pokemon/minior/mega/front.4bpp.lz");
     const u32 gMonPalette_MiniorMega[] = INCBIN_U32("graphics/pokemon/minior/mega/normal.gbapal.lz");
     const u32 gMonBackPic_MiniorMega[] = INCBIN_U32("graphics/pokemon/minior/mega/back.4bpp.lz");
     const u32 gMonShinyPalette_MiniorMega[] = INCBIN_U32("graphics/pokemon/minior/mega/shiny.gbapal.lz");
     const u8 gMonIcon_MiniorMega[] = INCBIN_U8("graphics/pokemon/minior/mega/icon.4bpp");
     const u8 gMonFootprint_MiniorMega[] = INCBIN_U8("graphics/pokemon/minior/mega/footprint.1bpp");
-#endif //P_FAMILY_MINIOR
+#endif //P_MEGA_EVOLUTIONS
 
 #if P_FAMILY_KOMALA
     const u32 gMonFrontPic_Komala[] = INCBIN_U32("graphics/pokemon/komala/front.4bpp.lz");

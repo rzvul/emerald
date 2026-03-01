@@ -4015,6 +4015,8 @@ u16 RoguePokedex_RedirectSpeciesGetSetFlag(u16 species)
     case SPECIES_TERAPAGOS_TERASTAL:
     case SPECIES_WOBBUFFET_PUNCHING:
     case SPECIES_PIKIN_MEGA:
+    case SPECIES_MINIOR_MEGA:
+
         return GET_BASE_SPECIES_ID(species);
     }
 #endif
