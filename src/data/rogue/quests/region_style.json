@@ -142,7 +142,7 @@
                     { "money": "QUEST_REWARD_MEDIUM_MONEY" },
                     {
                         "species": "SPECIES_MINIOR_METEOR_VIOLET",
-                        "custom_mon_id": "CUSTOM_MON_RZVUL_MINIOR_METEOR_VIOLET"
+                        "custom_mon_id": "CUSTOM_MON_EXOTIC_MINIOR_METEOR_VIOLET"
                     },
                     {
                         "species": "SPECIES_BELDUM",
