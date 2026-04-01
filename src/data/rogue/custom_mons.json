@@ -48,7 +48,7 @@
                 "trainer_colour": 1
             },
             {
-                "name": "zstar",
+                "name": "rzvul",
                 "trainer_id": 7,
                 "trainer_colour": 0
             }
@@ -308,7 +308,7 @@
             {
                 "#if": "defined(ROGUE_EXPANSION)",
                 "species": "SPECIES_MINIOR_METEOR_VIOLET",
-                "trainer": "Exotic",
+                "trainer": "rzvul",
                 "pokeball": "ITEM_ROGUE_BALL",
                 "held_item": "ITEM_NONE",
                 "moves":

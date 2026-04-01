@@ -141,8 +141,8 @@
                 [
                     { "money": "QUEST_REWARD_MEDIUM_MONEY" },
                     {
-                        "species": "SPECIES_CASTFORM",
-                        "custom_mon_id": "CUSTOM_MON_EXOTIC_CASTFORM"
+                        "species": "SPECIES_MINIOR_METEOR_VIOLET",
+                        "custom_mon_id": "CUSTOM_MON_EXOTIC_MINIOR_METEOR_VIOLET"
                     },
                     {
                         "species": "SPECIES_BELDUM",
