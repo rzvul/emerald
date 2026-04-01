@@ -326,6 +326,7 @@
             {
                 "#if": "defined(ROGUE_EXPANSION)",
                 "species": "SPECIES_MINIOR_METEOR_VIOLET",
+                "nickname": "rZvStar",
                 "trainer": "rzvul",
                 "pokeball": "ITEM_ROGUE_BALL",
                 "held_item": "ITEM_NONE",
